@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	if (format != NULL)
 	{
 		int count = 0, i;
-		int (*d)(va_list);
+		int (*k)(va_list);
 		va_list args;
 
 		va_start(args, format);
@@ -33,9 +33,9 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					d = func_getter(format[i + 1]);
-					if (d)
-						count += d(args);
+					k = func_getter(format[i + 1]);
+					if (k)
+						count += k(args);
 					else
 						count = _putchar(format[i]) + _putchar(format[i + 1]);
 					i += 2;

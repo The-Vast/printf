@@ -11,8 +11,8 @@ int print_c(va_list args)
 {
 	int c;
 
-	c = va_arg(args, list);
-	return (_putchar);
+	c = va_arg(args, int);
+	return (_putchar(c));
 }
 
 /**
@@ -20,7 +20,7 @@ int print_c(va_list args)
  * @args: string  argument
  * Return: number of characters
  */
-int print_s(va_list args);
+int print_s(va_list args)
 {
 	int i, count = 0;
 	char *str;
@@ -48,7 +48,8 @@ int print_s(va_list args);
 int print_percent(va_list args)
 {
 	char *str;
-		str = '%';
+
+	str = "%";
 	if (va_arg(args, int) == *str)
 	{
 		return (*str);
