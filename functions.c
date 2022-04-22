@@ -47,7 +47,7 @@ int print_s(va_list args);
  */
 int print_percent(va_list args)
 {
-	char *str
+	char *str;
 		str = '%';
 	if (va_arg(args, int) == *str)
 	{
